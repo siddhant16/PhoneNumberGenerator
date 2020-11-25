@@ -18,11 +18,6 @@ public class ResourceClass {
     private static HashSet<String> reservedNumbers = new HashSet<>();
     Random random = new Random();
 
-    @GetMapping("/getStatus")
-    public String getStatus() {
-        return "{\"status\":\"running\"}";
-    }
-
     @GetMapping("/random-number-generate")
     @ApiOperation(value = "get the random number from the phone book",
             notes = "Make a Get request to get the random phone number. Service will return random unallocated phone number in response.",
